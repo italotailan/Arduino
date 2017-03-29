@@ -1,0 +1,27 @@
+int led = 12;  \\ ascende o Led clicando o Botao...
+int btn = 13;
+
+bool on= false;
+
+void setup() {
+  
+  pinMode(btn,INPUT);
+  pinMode(led, OUTPUT);
+}
+
+
+void loop() {
+  
+  if(digitalRead(btn)== HIGH && on == false){
+  
+    digitalWrite(led,HIGH);
+  	on = true;
+  }
+  else if (digitalRead(btn)== HIGH && on == true){
+  	
+    digitalWrite(led,LOW);
+    on=false;
+  
+  }
+  
+}
